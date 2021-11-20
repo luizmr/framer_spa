@@ -1,0 +1,39 @@
+.general__card {
+	width: 100%;
+	position: relative;
+	margin-bottom: 20px;
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+
+	p {
+		cursor: default;
+	}
+
+	.general__content {
+		padding: 21px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		.content__tasks {
+			display: flex;
+			justify-content: flex-start;
+			flex-direction: column;
+
+			.content__task {
+				margin-bottom: 14px;
+			}
+		}
+
+		.content__task {
+			p:first-child {
+				font-weight: 600;
+				margin-bottom: 10px;
+				color: $primary-text-color;
+			}
+			p:last-child {
+				font-weight: 400;
+				color: $secondary-text-color;
+			}
+		}
+	}
+}

@@ -1,0 +1,19 @@
+.general {
+	width: 624px;
+	margin: 64px auto 0;
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+	align-items: center;
+	padding-bottom: 100px;
+
+	.general__select {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: $media-md-1) {
+	.general {
+		width: 90vw;
+	}
+}

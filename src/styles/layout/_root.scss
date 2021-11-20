@@ -1,0 +1,45 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+body {
+	box-sizing: border-box;
+	background-color: $bg-color;
+}
+
+p,
+span,
+label,
+div {
+	font-family: 'Inter', sans-serif !important;
+}
+
+p {
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+// /* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+// /* Firefox */
+input[type='number'] {
+	-moz-appearance: textfield;
+}
+
+hr {
+	margin: 1rem 0;
+	border: 0;
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+	width: 100%;
+}

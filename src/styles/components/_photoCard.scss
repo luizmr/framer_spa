@@ -1,0 +1,94 @@
+.photo__list {
+	width: 100%;
+	margin-top: 24px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 320px;
+	gap: 20px;
+	justify-content: flex-start;
+	align-items: center;
+
+	.photo__card {
+		width: 100%;
+		height: 100%;
+		position: relative;
+		margin-bottom: 20px;
+		box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+		transition: all 0.3s ease-in-out;
+
+		&:hover {
+			transform: translateY(-10px);
+			box-shadow: 0 15px 10px -2px $box-shadow-1;
+			cursor: pointer;
+		}
+
+		.photo__content {
+			padding: 21px;
+			display: flex;
+			justify-content: space-between;
+			flex-direction: column;
+			position: relative;
+
+			.content__main {
+				display: flex;
+				justify-content: space-between;
+				flex-direction: column;
+				margin-bottom: 10px;
+				.content__header {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+
+					p {
+						font-weight: 600;
+						color: $primary-text-color;
+					}
+
+					.MuiChip-root {
+						background-color: $secondary-text-color;
+					}
+					span {
+						color: $white;
+					}
+
+					margin-bottom: 10px;
+				}
+
+				.content__img {
+					display: flex;
+					justify-content: center;
+					img {
+						height: 150px;
+						object-fit: cover;
+						border-radius: 4px;
+					}
+				}
+			}
+
+			.content__footer {
+				p:first-child {
+					font-weight: 600;
+					color: $primary-text-color;
+					font-size: 0.9rem;
+					margin-bottom: 8px;
+				}
+				p:last-child {
+					color: $secondary-text-color;
+					font-size: 0.75rem;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $media-md-2) {
+	.photo__list {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media screen and (max-width: $media-sm-1) {
+	.photo__list {
+		grid-template-columns: 1fr;
+	}
+}

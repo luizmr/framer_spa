@@ -1,0 +1,132 @@
+.mt-small {
+	margin-top: 20px !important;
+}
+.homepage {
+	width: 624px;
+	margin: 64px auto 0;
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+	align-items: center;
+
+	.homepage__header {
+		display: flex;
+		justify-content: flex-start;
+		flex-direction: column;
+		width: 100%;
+		p {
+			margin-bottom: 20px;
+			font-weight: 600;
+			font-size: 1.5rem;
+			color: $primary-text-color;
+		}
+	}
+
+	svg {
+		color: $secondary-text-color;
+		align-self: center;
+		font-size: 40px;
+	}
+
+	.homepage__card-link {
+		margin: 0;
+		.homepage__card-link__header {
+			transition: all 0.3s ease-in-out;
+			box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+			border-color: $border-color-1;
+			&:hover {
+				transform: translateY(-10px);
+				box-shadow: 0 15px 10px -2px $box-shadow-1;
+				cursor: pointer;
+			}
+		}
+	}
+
+	.homepage__skeleton-card {
+		span {
+			border-radius: 4px;
+		}
+	}
+
+	.homepage__content {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		flex-wrap: wrap;
+		width: 100%;
+		padding-top: 20px;
+		padding-bottom: 100px;
+
+		.homepage__card-link:first-child,
+		.homepage__skeleton-card:first-child {
+			margin-left: 0;
+		}
+
+		.homepage__card-link,
+		.homepage__skeleton-card {
+			margin-left: 16px;
+			position: relative;
+		}
+
+		.homepage__card-link__header-content {
+			display: grid;
+			grid-template-rows: 40px 1fr;
+			grid-template-columns: 1fr;
+			justify-content: center;
+			align-items: center;
+			padding: 12px;
+
+			span:nth-child(1) {
+				display: flex;
+				justify-content: center;
+			}
+			span:nth-child(2) {
+				font-size: 1rem;
+				color: $secondary-text-color;
+				font-weight: 500;
+				margin-top: 20px;
+				word-break: normal;
+				text-align: center;
+			}
+		}
+	}
+}
+
+@media (max-width: $media-md-1) {
+	.homepage {
+		width: 90vw;
+		margin: 64px auto;
+
+		.homepage__content {
+			.homepage__card-link,
+			.homepage__skeleton-card {
+				margin: 8px !important;
+			}
+		}
+	}
+}
+
+@media (max-width: $media-md-2) {
+	.homepage {
+		width: 90vw;
+		margin: 32px auto 64px;
+
+		.homepage__content {
+			justify-content: flex-start;
+			.homepage__card-link {
+				margin: 8px !important;
+			}
+			.homepage__skeleton-card {
+				margin: 0 !important;
+			}
+		}
+	}
+}
+
+@media (max-width: $media-sm-2) {
+	.homepage {
+		.homepage__content {
+			justify-content: center;
+		}
+	}
+}
